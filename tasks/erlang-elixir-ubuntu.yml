@@ -1,0 +1,33 @@
+- name: "Add Erlang repo to `apt-get`"
+  block:
+    - name: "Create temp directory"
+      file:
+        state: directory
+        path: "{{ erlang_repo_temp_dir }}"
+
+    - name: "Download Repo Package"
+      get_url:
+        url: "https://packages.erlang-solutions.com/{{ erlang_repo_package }}"
+        dest: "{{ erlang_repo_temp_dir }}"
+
+    - name: "Add Repo to `apt-get`"
+      command: dpkg -i "{{ erlang_repo_package }}" chdir="{{ erlang_repo_temp_dir }}"
+      become: yes
+
+  always:
+    - name: "Delete temp directory"
+      file:
+        state: absent
+        path: "{{ erlang_repo_temp_dir }}"
+      become: yes
+
+- name: "Install Erlang, Elixir and inotify-tools"
+  apt:
+    name: "{{ item }}"
+    state: latest
+    update_cache: yes
+  with_items:
+    - erlang
+    - elixir
+    - inotify-tools
+  become: yes
