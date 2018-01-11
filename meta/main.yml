@@ -1,6 +1,6 @@
 galaxy_info:
   author: Florian Kempenich
-  description: Install **Erlang**, **Elixir**, and the **Phoenix Framework** on Ubuntu/Debian and OSX.
+  description: Install Erlang, Elixir, and the Phoenix Framework on Ubuntu/Debian and OSX.
 
   license: MIT
 
