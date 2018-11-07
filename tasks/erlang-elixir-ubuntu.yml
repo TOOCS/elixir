@@ -13,6 +13,8 @@
     - name: "Add Repo to `apt-get`"
       command: dpkg -i "{{ erlang_repo_package }}" chdir="{{ erlang_repo_temp_dir }}"
       become: yes
+      environment: 
+        DEBIAN_FRONTEND: noninteractive
 
   always:
     - name: "Delete temp directory"
