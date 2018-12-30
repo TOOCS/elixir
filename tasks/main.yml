@@ -8,9 +8,9 @@
 
 
 - name: "Install `hex`"
-  command: mix local.hex --force
+  shell: ". /etc/profile && mix local.hex --force"
   become: no
 
 - name: "Install Phoenix Framework"
-  command: mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new.ez --force
+  shell: ". /etc/profile && mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new.ez --force"
   become: no
