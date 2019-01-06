@@ -1,7 +1,16 @@
-[![Build Status](https://travis-ci.org/FlorianKempenich/ansible-role-erlang-elixir-phoenix.svg?branch=master)](https://travis-ci.org/FlorianKempenich/ansible-role-erlang-elixir-phoenix) [![Ansible Role](https://img.shields.io/ansible/role/23204.svg)](https://galaxy.ansible.com/FlorianKempenich/erlang-elixir-phoenix)
+[![Build Status](https://travis-ci.org/FlorianKempenich/TOOCS-elixir.svg?branch=master)](https://travis-ci.org/FlorianKempenich/TOOCS-elixir) [![Ansible Role](https://img.shields.io/ansible/role/23204.svg)](https://galaxy.ansible.com/FlorianKempenich/toocs_elixir)
 
-# Ansible role: `erlang-elixir-phoenix`
+
+# TOOCS / Ansible Role: `toocs_elixir`
+> #### /!\ This role has been renamed - Old name: `erlang-elixir-phoenix` /!\
+
 Install **Erlang**, **Elixir**, and the **Phoenix Framework** on Ubuntu/Debian and OSX.
+
+> ### TOOCS?
+> TOOCS - The Opinionated One-Click Setups are a set of tools / ansible roles designed to setup a system in one click. They are a simple, reliable, way to setup a given tool. You can use them as is, or, inspecting their code, as a tutorial to follow step by step.
+>
+> They are, as their name suggests, opinionated: while they guarantee to setup the given tool in one click, they do **not** guarantee consistency in _how_ they achieve it, new releases might introduce breaking changes.
+> Read the code and make sure you understand what's happening!
 
 ## Requirements
 None
@@ -20,7 +29,7 @@ Both these parameters are optional.
 ```
 - hosts: sandbox
   roles:
-      - FlorianKempenich.erlang-elixir-phoenix
+      - FlorianKempenich.toocs_elixir
 ```
 
 ## License
