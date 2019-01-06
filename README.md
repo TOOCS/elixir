@@ -37,3 +37,4 @@ MIT
 
 ## Author Information
 Find out more about my work: [Florian Kempenich](https://floriankempenich.com)
+
