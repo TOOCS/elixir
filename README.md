@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/TOOCS/elixir.svg?branch=master)](https://travis-ci.org/TOOCS/elixir) [![Ansible Role](https://img.shields.io/ansible/role/36108.svg)](https://galaxy.ansible.com/FlorianKempenich/toocs_elixir)
+[![Build Status](https://travis-ci.org/TOOCS/elixir.svg?branch=master)](https://travis-ci.org/TOOCS/elixir) [![Ansible Role](https://img.shields.io/ansible/role/36153.svg)](https://galaxy.ansible.com/FlorianKempenich/toocs_elixir)
 
 
 # TOOCS / Ansible Role: `FlorianKempenich.toocs_elixir`
