@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/TOOCS/elixir.svg?branch=master)](https://travis-ci.org/TOOCS/elixir) [![Ansible Role](https://img.shields.io/ansible/role/36153.svg)](https://galaxy.ansible.com/FlorianKempenich/toocs_elixir)
+[![Build Status](https://travis-ci.org/TOOCS/elixir.svg?branch=master)](https://travis-ci.org/TOOCS/elixir) [![Ansible Role](https://img.shields.io/ansible/role/36153.svg)](https://galaxy.ansible.com/TOOCS/elixir)
 
 
-# TOOCS / Ansible Role: `FlorianKempenich.toocs_elixir`
-> #### /!\ This role has been renamed - Old name: `erlang-elixir-phoenix` /!\
+# TOOCS / Ansible Role: `TOOCS.elixir`
+> #### /!\ This role has been renamed - Old name: `FlorianKempenich.erlang-elixir-phoenix` /!\
 
 Install **Erlang**, **Elixir**, and the **Phoenix Framework** on Ubuntu/Debian and OSX.
 
@@ -29,7 +29,7 @@ Both these parameters are optional.
 ```
 - hosts: sandbox
   roles:
-      - FlorianKempenich.toocs_elixir
+      - TOOCS.elixir
 ```
 
 ## License

@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: toocs_elixir
+  role_name: elixir
   author: Florian Kempenich
   description: Install Erlang, Elixir, and the Phoenix Framework on Ubuntu/Debian and OSX.
 
