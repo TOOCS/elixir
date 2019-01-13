@@ -1,0 +1,7 @@
+---
+# Erlang & Elixir have already been installed by the 'TOOCS.asdf' role dependency.
+# See meta/main.yml
+
+- name: "Set activation cmd"
+  set_fact:
+    activation_cmd: ". {{ ansible_env.HOME }}/.asdf/asdf.sh"

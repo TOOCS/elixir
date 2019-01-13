@@ -24,4 +24,12 @@ galaxy_info:
     - actor
     - resilience
 
-dependencies: []
+dependencies:
+  - role: TOOCS.asdf
+    vars:
+      skip_shell_setup: "{{ asdf_skip_shell_setup }}"
+      languages_to_install:
+        - erlang: "{{ erlang_versions }}"
+        - elixir: "{{ elixir_versions }}"
+    when: installation_method == "asdf"
+

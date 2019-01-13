@@ -1,2 +1,9 @@
-erlang_repo_temp_dir: "{{ ansible_env.HOME }}/erlang_repo_temp_dir"
+installation_method: "asdf"
+
+# 'asdf' method
+erlang_versions: [20.3.8.9]
+elixir_versions: [1.7.4]
+asdf_skip_shell_setup: false
+
+# 'native' method
 erlang_repo_package: "erlang-solutions_1.0_all.deb"

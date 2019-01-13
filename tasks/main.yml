@@ -1,16 +1,26 @@
-- name: "Install Erlang & Elixir - OSX"
-  include_tasks: erlang-elixir-osx.yml
-  when: ansible_os_family == "Darwin"
-  
-- name: "Install Erlang & Elixir - UBUNTU"
-  include_tasks: erlang-elixir-ubuntu.yml
-  when: ansible_os_family == "Debian"
+---
+- name:  "Install 'erlang' & 'elixir'"
+  block:
+    - import_tasks: install-native.yml
+      when: installation_method == "native"
 
+    - import_tasks: install-asdf.yml
+      when: installation_method == "asdf"
 
 - name: "Install `hex`"
-  shell: ". /etc/profile && mix local.hex --force"
+  shell: "{{ activation_cmd }} && mix local.hex --force"
+  args:
+    executable: /bin/bash
+  become: no
+
+- name: "Install `rebar`"
+  shell: "{{ activation_cmd }} && mix local.rebar --force"
+  args:
+    executable: /bin/bash
   become: no
 
 - name: "Install Phoenix Framework"
-  shell: ". /etc/profile && mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new.ez --force"
+  shell: "{{ activation_cmd }} && mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new.ez --force"
+  args:
+    executable: /bin/bash
   become: no
